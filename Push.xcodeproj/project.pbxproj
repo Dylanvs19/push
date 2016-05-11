@@ -18,6 +18,18 @@
 		AFB2FB301CE1464900EAD119 /* DVSDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB2F1CE1464900EAD119 /* DVSDatastore.swift */; };
 		AFB2FB461CE3A70300EAD119 /* DVSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB451CE3A70300EAD119 /* DVSMainViewController.swift */; };
 		AFB2FB481CE3A71A00EAD119 /* DVSDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB471CE3A71A00EAD119 /* DVSDayViewController.swift */; };
+		AFB2FB541CE3BF6100EAD119 /* DVSUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB4A1CE3BF6100EAD119 /* DVSUser+CoreDataProperties.swift */; };
+		AFB2FB551CE3BF6100EAD119 /* DVSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB4B1CE3BF6100EAD119 /* DVSUser.swift */; };
+		AFB2FB561CE3BF6100EAD119 /* DVSDefaultEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB4C1CE3BF6100EAD119 /* DVSDefaultEvent+CoreDataProperties.swift */; };
+		AFB2FB571CE3BF6100EAD119 /* DVSDefaultEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB4D1CE3BF6100EAD119 /* DVSDefaultEvent.swift */; };
+		AFB2FB581CE3BF6100EAD119 /* DVSToDoList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB4E1CE3BF6100EAD119 /* DVSToDoList+CoreDataProperties.swift */; };
+		AFB2FB591CE3BF6100EAD119 /* DVSToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB4F1CE3BF6100EAD119 /* DVSToDoList.swift */; };
+		AFB2FB5A1CE3BF6100EAD119 /* DVSEvent+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB501CE3BF6100EAD119 /* DVSEvent+CoreDataProperties.swift */; };
+		AFB2FB5B1CE3BF6100EAD119 /* DVSEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB511CE3BF6100EAD119 /* DVSEvent.swift */; };
+		AFB2FB5C1CE3BF6100EAD119 /* DVSDay+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB521CE3BF6100EAD119 /* DVSDay+CoreDataProperties.swift */; };
+		AFB2FB5D1CE3BF6100EAD119 /* DVSDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB531CE3BF6100EAD119 /* DVSDay.swift */; };
+		AFB2FB601CE3C88100EAD119 /* DVSMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB5F1CE3C88100EAD119 /* DVSMainTableViewCell.swift */; };
+		AFB2FB621CE3C89400EAD119 /* DVSMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFB2FB611CE3C89400EAD119 /* DVSMainTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +67,18 @@
 		AFB2FB2F1CE1464900EAD119 /* DVSDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVSDatastore.swift; sourceTree = "<group>"; };
 		AFB2FB451CE3A70300EAD119 /* DVSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVSMainViewController.swift; sourceTree = "<group>"; };
 		AFB2FB471CE3A71A00EAD119 /* DVSDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVSDayViewController.swift; sourceTree = "<group>"; };
+		AFB2FB4A1CE3BF6100EAD119 /* DVSUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DVSUser+CoreDataProperties.swift"; path = "../DVSUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFB2FB4B1CE3BF6100EAD119 /* DVSUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVSUser.swift; path = ../DVSUser.swift; sourceTree = "<group>"; };
+		AFB2FB4C1CE3BF6100EAD119 /* DVSDefaultEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DVSDefaultEvent+CoreDataProperties.swift"; path = "../DVSDefaultEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFB2FB4D1CE3BF6100EAD119 /* DVSDefaultEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVSDefaultEvent.swift; path = ../DVSDefaultEvent.swift; sourceTree = "<group>"; };
+		AFB2FB4E1CE3BF6100EAD119 /* DVSToDoList+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DVSToDoList+CoreDataProperties.swift"; path = "../DVSToDoList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFB2FB4F1CE3BF6100EAD119 /* DVSToDoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVSToDoList.swift; path = ../DVSToDoList.swift; sourceTree = "<group>"; };
+		AFB2FB501CE3BF6100EAD119 /* DVSEvent+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DVSEvent+CoreDataProperties.swift"; path = "../DVSEvent+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFB2FB511CE3BF6100EAD119 /* DVSEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVSEvent.swift; path = ../DVSEvent.swift; sourceTree = "<group>"; };
+		AFB2FB521CE3BF6100EAD119 /* DVSDay+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DVSDay+CoreDataProperties.swift"; path = "../DVSDay+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AFB2FB531CE3BF6100EAD119 /* DVSDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DVSDay.swift; path = ../DVSDay.swift; sourceTree = "<group>"; };
+		AFB2FB5F1CE3C88100EAD119 /* DVSMainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVSMainTableViewCell.swift; sourceTree = "<group>"; };
+		AFB2FB611CE3C89400EAD119 /* DVSMainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DVSMainTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +132,8 @@
 				AFB2FAFE1CE1411900EAD119 /* AppDelegate.swift */,
 				AFB2FB2F1CE1464900EAD119 /* DVSDatastore.swift */,
 				AFB2FB491CE3B2CB00EAD119 /* ViewControllers */,
+				AFB2FB631CE3C89900EAD119 /* CustomViews */,
+				AFB2FB5E1CE3BF7800EAD119 /* Models */,
 				AFB2FB021CE1411900EAD119 /* Main.storyboard */,
 				AFB2FB081CE1411900EAD119 /* Assets.xcassets */,
 				AFB2FB0A1CE1411900EAD119 /* LaunchScreen.storyboard */,
@@ -143,6 +169,32 @@
 				AFB2FB471CE3A71A00EAD119 /* DVSDayViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AFB2FB5E1CE3BF7800EAD119 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFB2FB4A1CE3BF6100EAD119 /* DVSUser+CoreDataProperties.swift */,
+				AFB2FB4B1CE3BF6100EAD119 /* DVSUser.swift */,
+				AFB2FB4C1CE3BF6100EAD119 /* DVSDefaultEvent+CoreDataProperties.swift */,
+				AFB2FB4D1CE3BF6100EAD119 /* DVSDefaultEvent.swift */,
+				AFB2FB4E1CE3BF6100EAD119 /* DVSToDoList+CoreDataProperties.swift */,
+				AFB2FB4F1CE3BF6100EAD119 /* DVSToDoList.swift */,
+				AFB2FB501CE3BF6100EAD119 /* DVSEvent+CoreDataProperties.swift */,
+				AFB2FB511CE3BF6100EAD119 /* DVSEvent.swift */,
+				AFB2FB521CE3BF6100EAD119 /* DVSDay+CoreDataProperties.swift */,
+				AFB2FB531CE3BF6100EAD119 /* DVSDay.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AFB2FB631CE3C89900EAD119 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				AFB2FB5F1CE3C88100EAD119 /* DVSMainTableViewCell.swift */,
+				AFB2FB611CE3C89400EAD119 /* DVSMainTableViewCell.xib */,
+			);
+			name = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +303,7 @@
 			files = (
 				AFB2FB0C1CE1411900EAD119 /* LaunchScreen.storyboard in Resources */,
 				AFB2FB091CE1411900EAD119 /* Assets.xcassets in Resources */,
+				AFB2FB621CE3C89400EAD119 /* DVSMainTableViewCell.xib in Resources */,
 				AFB2FB041CE1411900EAD119 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,8 +330,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB2FB461CE3A70300EAD119 /* DVSMainViewController.swift in Sources */,
+				AFB2FB5C1CE3BF6100EAD119 /* DVSDay+CoreDataProperties.swift in Sources */,
+				AFB2FB5D1CE3BF6100EAD119 /* DVSDay.swift in Sources */,
 				AFB2FB071CE1411900EAD119 /* Push.xcdatamodeld in Sources */,
 				AFB2FB301CE1464900EAD119 /* DVSDatastore.swift in Sources */,
+				AFB2FB561CE3BF6100EAD119 /* DVSDefaultEvent+CoreDataProperties.swift in Sources */,
+				AFB2FB5A1CE3BF6100EAD119 /* DVSEvent+CoreDataProperties.swift in Sources */,
+				AFB2FB541CE3BF6100EAD119 /* DVSUser+CoreDataProperties.swift in Sources */,
+				AFB2FB581CE3BF6100EAD119 /* DVSToDoList+CoreDataProperties.swift in Sources */,
+				AFB2FB551CE3BF6100EAD119 /* DVSUser.swift in Sources */,
+				AFB2FB591CE3BF6100EAD119 /* DVSToDoList.swift in Sources */,
+				AFB2FB571CE3BF6100EAD119 /* DVSDefaultEvent.swift in Sources */,
+				AFB2FB601CE3C88100EAD119 /* DVSMainTableViewCell.swift in Sources */,
+				AFB2FB5B1CE3BF6100EAD119 /* DVSEvent.swift in Sources */,
 				AFB2FB011CE1411900EAD119 /* DVSApplicationMainViewController.swift in Sources */,
 				AFB2FAFF1CE1411900EAD119 /* AppDelegate.swift in Sources */,
 				AFB2FB481CE3A71A00EAD119 /* DVSDayViewController.swift in Sources */,
@@ -506,6 +570,7 @@
 				AFB2FB281CE1411900EAD119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFB2FB291CE1411900EAD119 /* Build configuration list for PBXNativeTarget "PushTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +579,7 @@
 				AFB2FB2B1CE1411900EAD119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFB2FB2C1CE1411900EAD119 /* Build configuration list for PBXNativeTarget "PushUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +588,7 @@
 				AFB2FB2E1CE1411900EAD119 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

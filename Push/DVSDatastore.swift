@@ -8,8 +8,12 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 class DVSDatastore: NSObject {
+    
+    var eventStore:EKEventStore!
+    var events: NSMutableArray = []
     
     static let sharedDatastore = DVSDatastore ()
 
@@ -72,6 +76,24 @@ class DVSDatastore: NSObject {
                 abort()
             }
         }
+        
+
     }
+    
+    func fetchEvents() {
+        
+            let startDate = NSDate(timeIntervalSinceNow: -604800*10)
+            let endDate = NSDate(timeIntervalSinceNow: 604800*10);   //This is 10 weeks in seconds
+            let predicate = eventStore.predicateForEventsWithStartDate(startDate, endDate: endDate, calendars: nil)
+            events = NSMutableArray(array: eventStore.eventsMatchingPredicate(predicate))
+        
+    }
+    
+    
+    
+
+   
+    
+    
 
 }
