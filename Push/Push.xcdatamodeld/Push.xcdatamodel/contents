@@ -1,4 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+    <entity name="DVSDay" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DVSDefaultEvent" syncable="YES">
+        <attribute name="availability" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAllDay" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDetached" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="occurenceDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="organizer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timeForEvent" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="DVSEvent" syncable="YES">
+        <attribute name="availability" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isAllDay" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDetached" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="occurenceDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="organizer" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="DVSUser" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DVSEvent" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="DVSDefaultEvent" positionX="-54" positionY="-9" width="128" height="195"/>
+        <element name="DVSDay" positionX="-36" positionY="81" width="128" height="60"/>
+        <element name="DVSUser" positionX="-18" positionY="90" width="128" height="60"/>
+    </elements>
 </model>

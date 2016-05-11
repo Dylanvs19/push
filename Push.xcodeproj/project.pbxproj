@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AFB2FAFF1CE1411900EAD119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FAFE1CE1411900EAD119 /* AppDelegate.swift */; };
-		AFB2FB011CE1411900EAD119 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB001CE1411900EAD119 /* ViewController.swift */; };
+		AFB2FB011CE1411900EAD119 /* DVSApplicationMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB001CE1411900EAD119 /* DVSApplicationMainViewController.swift */; };
 		AFB2FB041CE1411900EAD119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB2FB021CE1411900EAD119 /* Main.storyboard */; };
 		AFB2FB071CE1411900EAD119 /* Push.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB051CE1411900EAD119 /* Push.xcdatamodeld */; };
 		AFB2FB091CE1411900EAD119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB2FB081CE1411900EAD119 /* Assets.xcassets */; };
@@ -16,6 +16,8 @@
 		AFB2FB171CE1411900EAD119 /* PushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB161CE1411900EAD119 /* PushTests.swift */; };
 		AFB2FB221CE1411900EAD119 /* PushUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB211CE1411900EAD119 /* PushUITests.swift */; };
 		AFB2FB301CE1464900EAD119 /* DVSDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB2F1CE1464900EAD119 /* DVSDatastore.swift */; };
+		AFB2FB461CE3A70300EAD119 /* DVSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB451CE3A70300EAD119 /* DVSMainViewController.swift */; };
+		AFB2FB481CE3A71A00EAD119 /* DVSDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB2FB471CE3A71A00EAD119 /* DVSDayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 /* Begin PBXFileReference section */
 		AFB2FAFB1CE1411900EAD119 /* Push.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Push.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB2FAFE1CE1411900EAD119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AFB2FB001CE1411900EAD119 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AFB2FB001CE1411900EAD119 /* DVSApplicationMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVSApplicationMainViewController.swift; sourceTree = "<group>"; };
 		AFB2FB031CE1411900EAD119 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AFB2FB061CE1411900EAD119 /* Push.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Push.xcdatamodel; sourceTree = "<group>"; };
 		AFB2FB081CE1411900EAD119 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		AFB2FB211CE1411900EAD119 /* PushUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUITests.swift; sourceTree = "<group>"; };
 		AFB2FB231CE1411900EAD119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFB2FB2F1CE1464900EAD119 /* DVSDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVSDatastore.swift; sourceTree = "<group>"; };
+		AFB2FB451CE3A70300EAD119 /* DVSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVSMainViewController.swift; sourceTree = "<group>"; };
+		AFB2FB471CE3A71A00EAD119 /* DVSDayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DVSDayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,7 @@
 			children = (
 				AFB2FAFE1CE1411900EAD119 /* AppDelegate.swift */,
 				AFB2FB2F1CE1464900EAD119 /* DVSDatastore.swift */,
-				AFB2FB001CE1411900EAD119 /* ViewController.swift */,
+				AFB2FB491CE3B2CB00EAD119 /* ViewControllers */,
 				AFB2FB021CE1411900EAD119 /* Main.storyboard */,
 				AFB2FB081CE1411900EAD119 /* Assets.xcassets */,
 				AFB2FB0A1CE1411900EAD119 /* LaunchScreen.storyboard */,
@@ -129,6 +133,16 @@
 				AFB2FB231CE1411900EAD119 /* Info.plist */,
 			);
 			path = PushUITests;
+			sourceTree = "<group>";
+		};
+		AFB2FB491CE3B2CB00EAD119 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AFB2FB001CE1411900EAD119 /* DVSApplicationMainViewController.swift */,
+				AFB2FB451CE3A70300EAD119 /* DVSMainViewController.swift */,
+				AFB2FB471CE3A71A00EAD119 /* DVSDayViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,10 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB2FB461CE3A70300EAD119 /* DVSMainViewController.swift in Sources */,
 				AFB2FB071CE1411900EAD119 /* Push.xcdatamodeld in Sources */,
 				AFB2FB301CE1464900EAD119 /* DVSDatastore.swift in Sources */,
-				AFB2FB011CE1411900EAD119 /* ViewController.swift in Sources */,
+				AFB2FB011CE1411900EAD119 /* DVSApplicationMainViewController.swift in Sources */,
 				AFB2FAFF1CE1411900EAD119 /* AppDelegate.swift in Sources */,
+				AFB2FB481CE3A71A00EAD119 /* DVSDayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

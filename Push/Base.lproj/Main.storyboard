@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Application Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Push" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DVSApplicationMainViewController" customModule="Push" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,106 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fik-c7-l9v" userLabel="DayContainerView">
+                                <rect key="frame" x="120" y="20" width="480" height="560"/>
+                                <connections>
+                                    <segue destination="ySF-Mc-UTy" kind="embed" id="QlQ-0m-gVj"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xpY-u8-Yea" userLabel="Main Container View">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="WO9-PA-dsO" kind="embed" id="obW-bd-jKH"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xpY-u8-Yea" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="6qe-UB-vnL"/>
+                            <constraint firstItem="xpY-u8-Yea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bdy-ci-EC0"/>
+                            <constraint firstItem="xpY-u8-Yea" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="E5A-WD-k1I"/>
+                            <constraint firstItem="xpY-u8-Yea" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-40" id="F8L-XJ-3UZ"/>
+                            <constraint firstItem="Fik-c7-l9v" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="Fib-ew-FU4"/>
+                            <constraint firstAttribute="trailing" secondItem="Fik-c7-l9v" secondAttribute="trailing" id="Qzd-FU-8co"/>
+                            <constraint firstItem="xpY-u8-Yea" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="W95-RP-gJ5"/>
+                            <constraint firstItem="Fik-c7-l9v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="aa9-8I-muq"/>
+                            <constraint firstItem="Fik-c7-l9v" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="axq-DI-EEN"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Fik-c7-l9v" secondAttribute="bottom" constant="20" id="eWL-oV-kUu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="F8L-XJ-3UZ"/>
+                                <exclude reference="aa9-8I-muq"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="xpY-u8-Yea" id="Hei-Z1-M2C"/>
+                        <outlet property="dayContainerView" destination="Fik-c7-l9v" id="qL3-as-TEX"/>
+                        <outlet property="mainContainerViewLargeHeight" destination="6qe-UB-vnL" id="OF4-9z-sMc"/>
+                        <outlet property="mainContainerViewSmallHeight" destination="F8L-XJ-3UZ" id="xFF-tQ-p4x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="194" y="422"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="Bug-30-fYP">
+            <objects>
+                <viewController id="WO9-PA-dsO" customClass="DVSMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oJF-sv-u3C"/>
+                        <viewControllerLayoutGuide type="bottom" id="6cw-hv-wzn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vqC-FZ-NAi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xoQ-k4-7iO">
+                                <rect key="frame" x="60" y="0.0" width="540" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQ1-cA-zqS">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="600"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39674030170000002" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xoQ-k4-7iO" firstAttribute="width" secondItem="vqC-FZ-NAi" secondAttribute="width" multiplier="0.9" id="0X3-Ae-iuh"/>
+                            <constraint firstItem="SQ1-cA-zqS" firstAttribute="height" secondItem="vqC-FZ-NAi" secondAttribute="height" id="2xM-Pf-CWg"/>
+                            <constraint firstItem="SQ1-cA-zqS" firstAttribute="centerY" secondItem="vqC-FZ-NAi" secondAttribute="centerY" id="Fnx-jz-zFI"/>
+                            <constraint firstItem="xoQ-k4-7iO" firstAttribute="height" secondItem="vqC-FZ-NAi" secondAttribute="height" id="OYs-D3-QB3"/>
+                            <constraint firstItem="xoQ-k4-7iO" firstAttribute="centerY" secondItem="vqC-FZ-NAi" secondAttribute="centerY" id="i1o-VV-mBk"/>
+                            <constraint firstItem="SQ1-cA-zqS" firstAttribute="width" secondItem="vqC-FZ-NAi" secondAttribute="width" multiplier="0.1" id="nvo-G7-9L3"/>
+                            <constraint firstAttribute="trailing" secondItem="xoQ-k4-7iO" secondAttribute="trailing" id="pr5-5d-s9T"/>
+                            <constraint firstItem="SQ1-cA-zqS" firstAttribute="leading" secondItem="vqC-FZ-NAi" secondAttribute="leading" id="vCl-4W-ZjU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="64C-XL-Xf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839" y="434"/>
+        </scene>
+        <!--Day View Controller-->
+        <scene sceneID="PJM-Iw-21G">
+            <objects>
+                <viewController id="ySF-Mc-UTy" customClass="DVSDayViewController" customModule="Push" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7iB-sl-f5h"/>
+                        <viewControllerLayoutGuide type="bottom" id="GxW-ec-ufv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e6O-dn-Id0">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="560"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39674030170000002" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ra-gS-TQu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="-236"/>
         </scene>
     </scenes>
 </document>
