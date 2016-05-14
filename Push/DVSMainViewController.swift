@@ -1,5 +1,5 @@
 //
-//  DVSViewController.swift
+//  DVSMainViewController.swift
 //  Push
 //
 //  Created by Dylan Straughan on 5/11/16.
@@ -12,12 +12,20 @@ class DVSMainViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet var tableView: UITableView!
     
+    let sharedDataStore = DVSDatastore ()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setupEventStore()
 
         tableView.registerClass(DVSMainTableViewCell.self, forCellReuseIdentifier: "mainTableViewCellIdentifier")
     
+    }
+    
+    func setupEventStore() {
+        
+            
     }
 
     override func didReceiveMemoryWarning() {

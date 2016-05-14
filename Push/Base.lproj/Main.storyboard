@@ -66,7 +66,7 @@
         <!--Main View Controller-->
         <scene sceneID="Bug-30-fYP">
             <objects>
-                <viewController id="WO9-PA-dsO" customClass="DVSMainViewController" sceneMemberID="viewController">
+                <viewController id="WO9-PA-dsO" customClass="DVSMainViewController" customModule="Push" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oJF-sv-u3C"/>
                         <viewControllerLayoutGuide type="bottom" id="6cw-hv-wzn"/>
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="64C-XL-Xf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="434"/>
+            <point key="canvasLocation" x="1057" y="430"/>
         </scene>
         <!--Day View Controller-->
         <scene sceneID="PJM-Iw-21G">

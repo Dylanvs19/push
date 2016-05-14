@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DVSApplicationMainViewController.swift
 //  Push
 //
 //  Created by Dylan Straughan on 5/9/16.

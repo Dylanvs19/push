@@ -16,7 +16,23 @@ class DVSDatastore: NSObject {
     var events: NSMutableArray = []
     
     static let sharedDatastore = DVSDatastore ()
+    
+    func setupEventStoreWithCompletion({Bool:isGranted
+        
+        
+        eventStore.requestAccessToEntityType(EKEntityType.Event) { (granted, error) in
+        
+        if granted {
+        
+        completionBlock(true)
+        }
 
+        
+        })
+        
+    
+    }
+    
     lazy var applicationDocumentsDirectory: NSURL = {
         // The directory the application uses to store the Core Data store file. This code uses a directory named "chance.Push" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
@@ -82,18 +98,12 @@ class DVSDatastore: NSObject {
     
     func fetchEvents() {
         
-            let startDate = NSDate(timeIntervalSinceNow: -604800*10)
-            let endDate = NSDate(timeIntervalSinceNow: 604800*10);   //This is 10 weeks in seconds
+            let startDate = NSDate(timeIntervalSinceNow: -604800*104)
+            let endDate = NSDate(timeIntervalSinceNow: 604800*104);   //This is 10 weeks in seconds
             let predicate = eventStore.predicateForEventsWithStartDate(startDate, endDate: endDate, calendars: nil)
             events = NSMutableArray(array: eventStore.eventsMatchingPredicate(predicate))
         
     }
-    
-    
-    
-
-   
-    
     
 
 }
