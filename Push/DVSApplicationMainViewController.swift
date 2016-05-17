@@ -14,47 +14,55 @@ class DVSApplicationMainViewController: UIViewController {
     @IBOutlet var dayContainerView: UIView!
     @IBOutlet var mainContainerViewSmallHeight: NSLayoutConstraint!
     @IBOutlet var mainContainerViewLargeHeight: NSLayoutConstraint!
+    @IBOutlet var mainContainerCenterX: NSLayoutConstraint!
+    @IBOutlet var dayContainerOffScreen: NSLayoutConstraint!
+    @IBOutlet var dayContainerOnScreen: NSLayoutConstraint!
+    @IBOutlet var dayContainerSmallHeight: NSLayoutConstraint!
+    @IBOutlet var dayContainerLargeHeight: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let datastore = DVSDatastore.sharedDatastore
+                
+        datastore.setupEventstore { (granted) in
+            
+            if granted {
+                
+         //       let vc = DVSMainViewController()
+                
+                
+                
+            }
+        }
         
     }
     
+    func dayContainerViewToCenter() {
+        
+        UIView.animateWithDuration(0.25, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options:.CurveEaseInOut, animations: { 
+            
+            self.mainContainerCenterX.constant = -10
+            self.mainContainerViewLargeHeight.active = false
+            self.mainContainerViewSmallHeight.active = true
+            
+            }, completion:nil)
+        
+        UIView.animateWithDuration(0.25, delay: 0.1, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options:.CurveEaseInOut, animations: {
+            
+            self.dayContainerLargeHeight.active = false
+            self.dayContainerSmallHeight.active = true
+            self.dayContainerOnScreen.active = true
+            
+            }, completion:nil)
+    }
     
-    func setEmbeddedViewController(viewController:UIViewController){
+    func dayContainerViewOffscreen() {
         
-        if childViewControllers.contains(viewController){
-            
-            return
-        }
         
-        for view in childViewControllers {
-            
-            view.willMoveToParentViewController(nil)
-            
-            if view.viewIfLoaded != nil {
-                
-                view.view.removeFromSuperview()
-            }
-            
-            view.removeFromParentViewController()
-            
-        }
-        
-        self .addChildViewController(viewController)
-        containerView.addSubview(viewController.view)
-        
-        viewController.view.topAnchor .constraintEqualToAnchor(self.view.topAnchor).active = true
-        viewController.view.bottomAnchor .constraintEqualToAnchor(self.view.bottomAnchor).active = true
-        viewController.view.rightAnchor .constraintEqualToAnchor(self.view.rightAnchor).active = true
-        viewController.view.leftAnchor .constraintEqualToAnchor(self.view.leftAnchor).active = true
-
-        viewController.didMoveToParentViewController(self)
         
     }
     
 }
-
 

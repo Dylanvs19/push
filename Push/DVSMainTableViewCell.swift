@@ -19,6 +19,8 @@ class DVSMainTableViewCell: UITableViewCell {
         commonInit()
         
     }
+    
+    
         
     func commonInit(){
         

@@ -25,10 +25,10 @@
         <relationship name="defaultEventsUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DVSUser" inverseName="usersDefaulEvents" inverseEntity="DVSUser" syncable="YES"/>
     </entity>
     <entity name="DVSEvent" representedClassName=".DVSEvent" syncable="YES">
-        <attribute name="availability" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="eventIdentifier" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isAllDay" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="availability" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="endDate" attributeType="Date" syncable="YES"/>
+        <attribute name="eventIdentifier" attributeType="String" defaultValueString="&quot;&quot;" syncable="YES"/>
+        <attribute name="isAllDay" attributeType="Boolean" syncable="YES"/>
         <attribute name="isDetached" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="occurenceDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -51,8 +51,8 @@
     <elements>
         <element name="DVSDay" positionX="-1028" positionY="-144" width="128" height="118"/>
         <element name="DVSDefaultEvent" positionX="-857" positionY="-216" width="128" height="73"/>
-        <element name="DVSToDoList" positionX="-632" positionY="-351" width="128" height="73"/>
         <element name="DVSEvent" positionX="-362" positionY="-283" width="128" height="238"/>
+        <element name="DVSToDoList" positionX="-632" positionY="-351" width="128" height="73"/>
         <element name="DVSUser" positionX="-657" positionY="-115" width="128" height="88"/>
     </elements>
 </model>

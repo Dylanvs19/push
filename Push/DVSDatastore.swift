@@ -12,25 +12,26 @@ import EventKit
 
 class DVSDatastore: NSObject {
     
-    var eventStore:EKEventStore!
+    var eventStore:EKEventStore! = EKEventStore()
     var events: NSMutableArray = []
     
     static let sharedDatastore = DVSDatastore ()
     
-    func setupEventStoreWithCompletion({Bool:isGranted
+    func setupEventstore (completion:(granted:Bool)->()){
         
-        
-        eventStore.requestAccessToEntityType(EKEntityType.Event) { (granted, error) in
-        
-        if granted {
-        
-        completionBlock(true)
+        eventStore.requestAccessToEntityType(EKEntityType.Event) { (isGranted, error) in
+            if isGranted {
+                
+                self.fetchEvents()
+                completion(granted: isGranted)
+                
+            } else {
+                
+                completion(granted: isGranted)
+                
+            }
         }
-
         
-        })
-        
-    
     }
     
     lazy var applicationDocumentsDirectory: NSURL = {
@@ -91,9 +92,9 @@ class DVSDatastore: NSObject {
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
                 abort()
             }
+            
         }
         
-
     }
     
     func fetchEvents() {
@@ -105,5 +106,4 @@ class DVSDatastore: NSObject {
         
     }
     
-
 }

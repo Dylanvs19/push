@@ -13,19 +13,14 @@ class DVSMainViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet var tableView: UITableView!
     
     let sharedDataStore = DVSDatastore ()
+    let events = []
+    let days = 4*365
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupEventStore()
-
+                
         tableView.registerClass(DVSMainTableViewCell.self, forCellReuseIdentifier: "mainTableViewCellIdentifier")
     
-    }
-    
-    func setupEventStore() {
-        
-            
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +30,7 @@ class DVSMainViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return days
 
     }
     
