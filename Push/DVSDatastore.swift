@@ -13,16 +13,18 @@ import EventKit
 class DVSDatastore: NSObject {
     
     var eventStore:EKEventStore! = EKEventStore()
-    var events: NSMutableArray = []
+    let user = DVSUser()
     
-    static let sharedDatastore = DVSDatastore ()
+    static let sharedDatastore = DVSDatastore()
     
     func setupEventstore (completion:(granted:Bool)->()){
         
         eventStore.requestAccessToEntityType(EKEntityType.Event) { (isGranted, error) in
             if isGranted {
-                
-                self.fetchEvents()
+        
+                self.fetchEventsfromEventstore()
+                self.fetchToDoList()
+                self.fetchDefaultEvents()
                 completion(granted: isGranted)
                 
             } else {
@@ -97,12 +99,23 @@ class DVSDatastore: NSObject {
         
     }
     
-    func fetchEvents() {
+    func fetchEventsfromEventstore() {
         
             let startDate = NSDate(timeIntervalSinceNow: -604800*104)
             let endDate = NSDate(timeIntervalSinceNow: 604800*104);   //This is 10 weeks in seconds
             let predicate = eventStore.predicateForEventsWithStartDate(startDate, endDate: endDate, calendars: nil)
-            events = NSMutableArray(array: eventStore.eventsMatchingPredicate(predicate))
+            user.usersEvents = NSSet(array: eventStore.eventsMatchingPredicate(predicate))
+        
+    }
+    
+    func fetchDefaultEvents() {
+        
+        
+    }
+    
+    func fetchToDoList() {
+        
+        
         
     }
     

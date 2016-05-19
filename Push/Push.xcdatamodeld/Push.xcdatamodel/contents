@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
     <entity name="DVSDay" representedClassName=".DVSDay" syncable="YES">
-        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="hasCustomDays" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="endDate" attributeType="Date" syncable="YES"/>
+        <attribute name="hasCustomDays" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" attributeType="Date" syncable="YES"/>
         <relationship name="dayToDefaultEvent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DVSDefaultEvent" inverseName="daysEventCanOccur" inverseEntity="DVSDefaultEvent" syncable="YES"/>
     </entity>
     <entity name="DVSDefaultEvent" representedClassName=".DVSDefaultEvent" syncable="YES">
-        <attribute name="availability" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="eventIdentifier" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isAllDay" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="isDetached" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="availability" attributeType="String" syncable="YES"/>
+        <attribute name="eventIdentifier" attributeType="String" syncable="YES"/>
+        <attribute name="isAllDay" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDetached" attributeType="Boolean" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="occurenceDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="occurenceDate" attributeType="Date" syncable="YES"/>
         <attribute name="organizer" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="timeForEvent" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" attributeType="String" syncable="YES"/>
+        <attribute name="timeForEvent" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="daysEventCanOccur" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DVSDay" inverseName="dayToDefaultEvent" inverseEntity="DVSDay" syncable="YES"/>
         <relationship name="defaultEventsUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DVSUser" inverseName="usersDefaulEvents" inverseEntity="DVSUser" syncable="YES"/>
     </entity>
@@ -29,13 +27,13 @@
         <attribute name="endDate" attributeType="Date" syncable="YES"/>
         <attribute name="eventIdentifier" attributeType="String" defaultValueString="&quot;&quot;" syncable="YES"/>
         <attribute name="isAllDay" attributeType="Boolean" syncable="YES"/>
-        <attribute name="isDetached" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isDetached" attributeType="Boolean" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="occurenceDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="occurenceDate" attributeType="Date" syncable="YES"/>
         <attribute name="organizer" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" attributeType="Date" syncable="YES"/>
+        <attribute name="status" attributeType="String" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
         <relationship name="eventsToDoList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DVSToDoList" inverseName="toDoListsEvents" inverseEntity="DVSToDoList" syncable="YES"/>
         <relationship name="eventsUser" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DVSUser" inverseName="usersEvents" inverseEntity="DVSUser" syncable="YES"/>
     </entity>
@@ -45,13 +43,13 @@
     </entity>
     <entity name="DVSUser" representedClassName=".DVSUser" syncable="YES">
         <relationship name="usersDefaulEvents" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DVSDefaultEvent" inverseName="defaultEventsUser" inverseEntity="DVSDefaultEvent" syncable="YES"/>
-        <relationship name="usersEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DVSEvent" inverseName="eventsUser" inverseEntity="DVSEvent" syncable="YES"/>
+        <relationship name="usersEvents" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="DVSEvent" inverseName="eventsUser" inverseEntity="DVSEvent" syncable="YES"/>
         <relationship name="usersToDoList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DVSToDoList" inverseName="toDoListsUser" inverseEntity="DVSToDoList" syncable="YES"/>
     </entity>
     <elements>
-        <element name="DVSDay" positionX="-1028" positionY="-144" width="128" height="118"/>
-        <element name="DVSDefaultEvent" positionX="-857" positionY="-216" width="128" height="73"/>
-        <element name="DVSEvent" positionX="-362" positionY="-283" width="128" height="238"/>
+        <element name="DVSDay" positionX="-1028" positionY="-144" width="128" height="120"/>
+        <element name="DVSDefaultEvent" positionX="-857" positionY="-216" width="128" height="240"/>
+        <element name="DVSEvent" positionX="-362" positionY="-283" width="128" height="240"/>
         <element name="DVSToDoList" positionX="-632" positionY="-351" width="128" height="73"/>
         <element name="DVSUser" positionX="-657" positionY="-115" width="128" height="88"/>
     </elements>
